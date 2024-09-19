@@ -35,7 +35,7 @@ Build the image:
 docker compose build dev
 ```
 
-Run the container:
+Run the container add `-d` for running "detached mode" (container is running in the background):
 ```bash
 docker compose up dev
 ```
