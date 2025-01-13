@@ -2,9 +2,19 @@
 
 Using the [Relsense ROS wrapper (ros1 legacy branch)](https://github.com/IntelRealSense/realsense-ros/tree/ros1-legacy)
 
-To start the camera node in ROS:
+To start the camera node in ROS with default parameters:
 ```bash
 roslaunch realsense2_camera rs_camera.launch
+```
+
+To specify parameters:
+```bash
+roslaunch realsense2_camera rs_camera.launch color_width:=1280 color_height:=720 color_fps:=30 depth_width:=1280 depth_height:=720 depth_fps:=30 align_depth:=true
+```
+
+Record rosbag:
+```bash
+rosbag record /camera/depth/image_rect_raw /camera/color/image_raw /tf /tf_static
 ```
 
 # Update user permissions (to access USB)
